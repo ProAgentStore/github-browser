@@ -1,0 +1,16 @@
+{
+  "id": "github-browser",
+  "name": "GitHub Browser",
+  "description": "Browse every GitHub repository you can reach — across all your personal accounts and organizations — from one place. It enumerates your orgs and repos over your own machine's git and gh credentials (run `pags up`), then answers questions about what exists: which repos are where, who owns them, when they were last touched, open issues and pull requests, branches and languages. Strictly read-only: it lists, searches and explains, and never pushes, opens, closes, comments or changes anything.",
+  "storeType": "agent",
+  "category": "developer-tools",
+  "model": "@cf/meta/llama-3.2-3b-instruct",
+  "template": "worker",
+  "serverConfig": {
+    "durableObject": true,
+    "routes": [
+      "github-browser.proagentstore.online/*"
+    ],
+    "aiBilling": "caller-provided"
+  }
+}
